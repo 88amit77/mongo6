@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd">
+<Header>
+<DocumentVersion>1.01</DocumentVersion>
+<MerchantIdentifier>A1JMG6531Z3EIJ</MerchantIdentifier>
+</Header>
+<MessageType>Inventory</MessageType>
+<Message>
+<MessageID>1</MessageID>
+<OperationType>Update</OperationType>
+<Inventory>
+<SKU>TS1305A</SKU>
+<Quantity>18</Quantity>
+<FulfillmentLatency>2</FulfillmentLatency>
+<SwitchFulfillmentTo>MFN</SwitchFulfillmentTo>
+</Inventory>
+</Message>
+</AmazonEnvelope>
+
+
+
+b'<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd">
+<Header><DocumentVersion>1.01</DocumentVersion><MerchantIdentifier>A1JMG6531Z3EIJ</MerchantIdentifier>
+</Header><MessageType>Price</MessageType><Message><MessageID>1</MessageID><Price>
+    <SKU>ADIDAS_BA7427-6</SKU><StandardPrice currency="INR">4199</StandardPrice>
+    <Sale><StartDate>2021-05-19T11:22:44.341593</StartDate>
+        <EndDate>2022-05-20T11:22:44.341593</EndDate>
+        <SalePrice currency="INR">5999</SalePrice></Sale>
+</Price></Message><Message><MessageID>2</MessageID>
+    <Price><SKU>Mitocon_401362001</SKU>
+        <StandardPrice currency="INR">2799</StandardPrice
+        ><Sale><StartDate>2021-05-19T11:22:44.341593</StartDate><EndDate>2022-05-20T11:22:44.341593</EndDate><SalePrice currency="INR">1999</SalePrice></Sale></Price></Message></AmazonEnvelope>'

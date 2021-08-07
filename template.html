@@ -1,0 +1,96 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Picklist</title>
+    <style type="text/css">
+        @page {
+            size: A4;
+            margin: 1cm;
+        }
+
+        .table {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 5px;
+            background-color: #fff;
+        }
+
+        .table th,
+        .table td {
+            padding: 5px;
+            vertical-align: top;
+            border-top: 1px solid;
+            text-align: center;
+        }
+
+        .table thead th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #000;
+        }
+
+        .table tbody + tbody {
+            border-top: 2px solid #000;
+        }
+
+        .table .table {
+            background-color: #fff;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <div>
+            <div class="row">
+                <div style="width: 50%; float: left">
+                    <h3>Picklist ID: {{ picklist_id }}</h3>
+                    <div class="text-center" style="width: 100%">
+                     <img style='width: 240px;height:80px' src='data:image/jpeg;base64,{{picklist_barcode}}'>
+                    </div>
+                    <div>
+                        <h4>Warehouse: {{warehouse}}</h4>
+                    </div>
+                </div>
+                <div style="padding: 4% 3%;width: 50%; float: left">
+                    <div style="padding: 7%; text-align: center; border: 1px dashed #000;">
+                        Do NOT put in shipping box
+                    </div>
+                    <h4 style="margin-top: 15px;">
+                        Shipout Time: {{ shipout_time }}
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Bin</th>
+                <th>FSKU</th>
+                <th>SKU</th>
+                <th>Listing Id</th>
+                <th>Quantity</th>
+                <th>Title</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in item_list %}
+                <tr>
+                    <td>{{ item.bin }}</td>
+                    <td>{{ item.fsku }}</td>
+                    <td>{{ item.sku }}</td>
+                    <td>{{ item.listingId }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>{{ item.title }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

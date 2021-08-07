@@ -1,0 +1,35 @@
+@@Docker
+
+
+
+cd employees
+sudo docker exec -t employees_employees_web_1 employees/manage.py makemigrations
+sudo docker exec -t employees_employees_web_1 employees/manage.py migrate
+
+
+###Cmd to start docker engine again
+
+sudo docker start users_users_web_1
+
+###to check  size of instance
+df -h
+
+lsblk
+
+sudo growpart /dev/xvda 1
+
+sudo resize2fs /dev/xvda1
+
+sudo mount -o size=10M,rw,nodev,nosuid -t tmpfs tmpfs /tmp
+
+
+##how to create package in lambda function
+mkdir python
+pip3 install -t python croniter
+Then zip this folder python and upload it in layers
+
+
+###in case of conflict issue and have less branches then cmd we can use
+git fetch origin
+git reset --hard origin/master (or your branch name)
+

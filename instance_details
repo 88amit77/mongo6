@@ -1,0 +1,100 @@
+###WMS(production branch=master)
+cd Downloads
+ssh -i "Warehouse.pem" ubuntu@65.0.84.41
+
+
+##warehouse
+cd Downloads
+ssh -i "Warehouse.pem" ubuntu@65.0.77.224
+
+###manageshipment
+cd Downloads
+ssh -i "Warehouse.pem" ubuntu@52.66.194.248
+
+
+
+#for orders instances
+
+cd Downloads
+ssh -i "Warehouse.pem" ubuntu@65.0.47.230
+
+
+#for employees instance
+cd Downloads
+ssh -i "Warehouse.pem" ubuntu@13.126.88.138
+For file zillaa=>ec2-13-235-42-253.ap-south-1.compute.amazonaws.com
+###url = https://bitbucket.org/backend_buymore/employees.git
+
+##test instance
+cd Downloads
+cd test_pem
+
+ssh -i "Warehouse.pem" ec2-user@15.207.232.125
+
+cd testers_v1
+cd testers_buymore2
+
+##for product instance(production branch=development)
+cd Downloads
+ssh -i "Buymore_2_Products.pem" ubuntu@3.7.122.68
+cd /home/buymore/products
+
+psw=buymore@123
+###url = https://rahulbuy@bitbucket.org/backend_buymore/products.git
+###url = https://bitbucket.org/backend_buymore/products.git
+
+##vendors instance details
+cd Downloads
+ssh -i "Buymore_2_Vendors.pem" ubuntu@3.7.180.104
+
+For file zilla==>ec2-3-7-180-104.ap-south-1.compute.amazonaws.com
+
+##buymore_backend_listing
+cd Downloads
+ssh -i "Warehouse.pem" ubuntu@15.207.117.119
+
+For filezilla==>ec2-15-207-117-119.ap-south-1.compute.amazonaws.com
+
+
+##users
+cd Downloads
+ssh -i "Buymore_2_Users.pem" ubuntu@15.206.39.155
+
+###empployee_new
+cd Downloads
+ssh -i "Warehouse.pem" ubuntu@35.154.47.45
+
+###dev  server
+cd Downloads
+ssh -i "buymore-dev.pem" ubuntu@65.1.67.119
+
+##ecommerce_app
+cd Downloads
+ssh -i “ecommerce_app.pem" ubuntu@15.206.46.69
+
+##watsapp
+ssh -i "Warehouse.pem" ubuntu@65.1.161.139
+
+
+###if u get any message like private key restricted then run cmd
+In side folder where that file is then chmod 600 file_name
+===chmod 600 Buymore_2_Vendors.pem
+
+Cd cron
+crontab -e
+###for cron save and quiet
+
+
+1—>ctrl+X
+2—>Y
+3—>Enter
+
+##amit07tiwari
+@9451254451a
+
+@@iam role
+868471381181
+##query to create index in orders table
+CREATE INDEX product_id_order_id_order_item_id_portal_sku_buymore_sku_idx
+ON api_neworder(product_id,order_id,order_item_id,portal_sku,buymore_sku)
+

@@ -1,0 +1,2 @@
+username,email,password,is_superuser,first_name,last_name,is_staff,is_active,date_joined
+amit_test2,amittest@gmail.com,12345,False,amit,test,False,True,2020-09-04 16:26:26.089431+00
